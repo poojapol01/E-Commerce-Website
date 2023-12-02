@@ -29,10 +29,10 @@ namespace E_Commerce_Website.Controllers
             {
                 ModelState.AddModelError("name", "The Display order cannot exactly match the Name");
             }
-            //if (obj.Name != null && obj.Name.ToLower() == "test")
-            //{
-            //    ModelState.AddModelError("", "The Category Name cannot be test");
-            //}
+            if (obj.Name != null && obj.Name.ToLower() == "test")
+            {
+                ModelState.AddModelError("", "The Category Name cannot be test");
+            }
             if (ModelState.IsValid)
             {
                 _db.Categories.Add(obj);
