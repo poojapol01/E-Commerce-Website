@@ -17,5 +17,10 @@ namespace E_Commerce_Website.Controllers
             List<Category> objCategoryList = _db.Categories.ToList();
             return View(objCategoryList);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
